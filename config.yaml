@@ -1,0 +1,7 @@
+samples: samples.tsv
+
+ref:
+  fasta: "**insert_path**/data/mm10.fa"
+  known_sites: "**insert_path**/00-All.vcf.gz_new.vcf"
+Path:
+  Path: "**insert_path**"

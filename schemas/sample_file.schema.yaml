@@ -1,0 +1,25 @@
+$schema: "http://json-schema.org/draft-06/schema#"
+
+description: an entry in the sample sheet
+properties:
+  basename:
+    type: string
+    description: sample basename
+  samples:
+    type: string
+    description: sample name/identifier
+  library:
+    type: string
+    description: Library kind
+  fq1:
+    type: string
+    description: fq1 file
+  fq2:
+    type: string
+    description: fq2 file
+
+required:
+  - basename
+  - samples
+  - library
+  - fq1
