@@ -1,1 +1,0 @@
-# Snakemake_WGS_Variant_Calling
