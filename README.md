@@ -6,5 +6,5 @@ Save fastq files in data/samples/ folder as "XXX_plus_R1.fastq.gz" and "XXX_minu
 * Step 2: Adjust samples.tsv file
 * Step 3: Adjust config file
 * Step 5: Fix the path in rule all block.
-* Step 6: Cluster Run: snakemake --cluster sbatch --latency-wait 30  -j 6
+* Step 6: Cluster Run: snakemake --cluster sbatch --latency-wait 30  -j 6 \
 	Login node: $snakemake
