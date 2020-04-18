@@ -7,3 +7,5 @@ Make a directory "data". Within that, make a sub-directory "samples". Save fastq
 * Step 5: Fix the path in rule all block.
 * Step 6: Cluster Run: snakemake --cluster sbatch --latency-wait 30  -j 6 \
 * Step 6: Create dag: snakemake --dag | dot -Tpdf > dag.pdf
+
+![](images/dag2.pdf)
