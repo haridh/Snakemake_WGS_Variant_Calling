@@ -8,5 +8,3 @@ rule Mutect:
     threads: 48
     run:
         shell ("gatk Mutect2 --input {input.plusbam} --input {input.minusbam} -normal {input.minusbam} --output {output.mutect} -reference {input.ref_fasta}")
-	shell ("mkdir {Path}/Lofreq")
-        shell ("lofreq somatic -n {input.minusbam} -t {input.plusbam} -f {input.ref_fasta} -o {Path}/Lofreq/{basename}.lofreq")

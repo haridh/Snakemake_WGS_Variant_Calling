@@ -6,10 +6,7 @@ rule bwa_align:
     output:
         "{Path}/mapped_reads/{sample}.sort.bam"
     params:
-        rg=r"@RG\tID:{sample}\tLB:{sample}\tSM:{Path}/{sample}.sort.dup.bqsr.bam\tPL:ILLUMINA"
+        rg=r"@RG\tID:{sample}\tLB:{sample}\tSM:{Path}/BQSR/{sample}.sort.dup.bqsr.bam\tPL:ILLUMINA"
     threads: 48
     run:
-        if len(single_end_samples)>0:
-            shell("bwa mem -R '{params.rg}' {input.ref_fasta} {input.fq1} | samtools view -bh - | samtools sort -m 2G - > {output}")
-        elif len(paired_end_samples)>0:
-            shell("bwa mem -R '{params.rg}' {input.ref_fasta} {input.fq1} {input.fq2} | samtools view -bh - | samtools sort -m 2G - > {output}")
+        shell ("bwa mem -R '{params.rg}' {input.ref_fasta} {input.fq1} {input.fq2} | samtools sort -m 2G -T {input.fq1}_temp - > {output}")
