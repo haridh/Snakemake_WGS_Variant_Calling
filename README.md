@@ -8,5 +8,4 @@ Make a directory "data". Within that, make a sub-directory "samples". Save fastq
 * Step 5: Cluster Run: snakemake --cluster sbatch --latency-wait 30  -j 6 \
 * Step 6: Create dag: snakemake --dag | dot -Tpdf > dag.pdf
 * Step 7: Create rulegraph: snakemake --rulegraph | dot -Tpdf > rulegraph.pdf
-
-![](images/rulegraph.png)
+<img src="images/rulegraph.png" width=200>
